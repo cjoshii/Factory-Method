@@ -1,24 +1,39 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello! Welcome to the Shape Factory!");
+Console.WriteLine("Hello! Welcome to the Shape Factory! Chose a shape to draw:");
+Console.WriteLine("1. Rectangle");
+Console.WriteLine("2. Square");
+Console.WriteLine("3. Circle");
+Console.WriteLine("4. Triangle");
 
-var factory = new ShapeFactory();
+var input = Console.ReadLine();
+ShapeFactory factory = null;
 
-factory.GetShape(ShapeType.Rectangle, [10, 20]).Draw();
-factory.GetShape(ShapeType.Square, [10]).Draw();
-factory.GetShape(ShapeType.Circle, [10]).Draw();
-
-var triangleFactory = new TriangleFactory();
-// This will throw an exception
-try
+if(input == "1")
 {
-    triangleFactory.GetShape(ShapeType.Triangle, [10, 10, 10]).Draw();
-    triangleFactory.GetShape(ShapeType.Square, [10]).Draw();
-    triangleFactory.GetShape(ShapeType.Hexagon, [10]).Draw();
+  factory = new RectangleFactory();
 }
-catch (Exception ex)
+else if(input == "2")
 {
-    Console.WriteLine(ex.Message);
+    factory = new SquareFactory();
 }
+else if(input == "3")
+{
+   factory = new CircleFactory();
+}
+else if(input == "4")
+{
+    factory = new TriangleFactory();
+}
+else
+{
+    Console.WriteLine("Invalid input. Please try again.");
+}
+
+
+if(factory != null){
+    factory.Draw();
+}
+
 
 
 //-----------------------------Drawing Pad Example--------------------------------//
@@ -29,7 +44,7 @@ Console.WriteLine("1. Animals");
 Console.WriteLine("2. Vehicles");
 Console.WriteLine("3. Science");
 
-var input = Console.ReadLine();
+input = Console.ReadLine();
 
 DrawingPad? drawingPad = null;
 

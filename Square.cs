@@ -1,15 +1,15 @@
 public class Square : IShape
 {
-    private readonly int _sideLength;
+    
 
-    public Square(int sideLength)
+    public Square()
     {
-        _sideLength = sideLength;
+        
         // Constructor
     }
 
     public void Draw()
     {
-        Console.WriteLine("Drawing Square with side length " + _sideLength);
+        Console.WriteLine("Drawing Square");
     }
 }

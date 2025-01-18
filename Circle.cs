@@ -1,15 +1,12 @@
 public class Circle : IShape
 {
-    private readonly int _radius;
 
-    public Circle(int radius)
+    public Circle()
     {
-        _radius = radius;
-        // Constructor
     }
 
     public void Draw()
     {
-        Console.WriteLine("Drawing Circle with radius " + _radius);
+        Console.WriteLine("Drawing Circle");
     }
 }
