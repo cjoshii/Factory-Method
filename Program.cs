@@ -6,7 +6,7 @@ Console.WriteLine("3. Circle");
 Console.WriteLine("4. Triangle");
 
 var input = Console.ReadLine();
-ShapeFactory factory = null;
+ShapeFactory? factory = null;
 
 if(input == "1")
 {
@@ -28,7 +28,6 @@ else
 {
     Console.WriteLine("Invalid input. Please try again.");
 }
-
 
 if(factory != null){
     factory.Draw();
