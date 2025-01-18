@@ -19,3 +19,37 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
+
+
+//-----------------------------Drawing Pad Example--------------------------------//
+
+
+Console.WriteLine("Hello! Welcome to the Drawing Pad! Please select a category to draw from:");
+Console.WriteLine("1. Animals");
+Console.WriteLine("2. Vehicles");
+Console.WriteLine("3. Science");
+
+var input = Console.ReadLine();
+
+DrawingPad? drawingPad = null;
+
+if(input == "1")
+{
+    drawingPad = new AnimalDrawingPad();
+}
+else if(input == "2")
+{
+    drawingPad = new VehicleDrawingPad();
+}
+else if(input == "3")
+{
+    drawingPad = new ScienceDrawingPad();
+}
+else
+{
+    Console.WriteLine("Invalid input. Please try again.");
+}
+
+if(drawingPad != null){
+    drawingPad.Draw();
+}
