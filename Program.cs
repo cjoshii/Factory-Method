@@ -8,19 +8,19 @@ Console.WriteLine("4. Triangle");
 var input = Console.ReadLine();
 ShapeFactory? factory = null;
 
-if(input == "1")
+if (input == "1")
 {
-  factory = new RectangleFactory();
+    factory = new RectangleFactory();
 }
-else if(input == "2")
+else if (input == "2")
 {
     factory = new SquareFactory();
 }
-else if(input == "3")
+else if (input == "3")
 {
-   factory = new CircleFactory();
+    factory = new CircleFactory();
 }
-else if(input == "4")
+else if (input == "4")
 {
     factory = new TriangleFactory();
 }
@@ -29,7 +29,8 @@ else
     Console.WriteLine("Invalid input. Please try again.");
 }
 
-if(factory != null){
+if (factory != null)
+{
     factory.Draw();
 }
 
@@ -47,15 +48,15 @@ input = Console.ReadLine();
 
 DrawingPad? drawingPad = null;
 
-if(input == "1")
+if (input == "1")
 {
     drawingPad = new AnimalDrawingPad();
 }
-else if(input == "2")
+else if (input == "2")
 {
     drawingPad = new VehicleDrawingPad();
 }
-else if(input == "3")
+else if (input == "3")
 {
     drawingPad = new ScienceDrawingPad();
 }
@@ -64,6 +65,7 @@ else
     Console.WriteLine("Invalid input. Please try again.");
 }
 
-if(drawingPad != null){
+if (drawingPad != null)
+{
     drawingPad.Draw();
 }

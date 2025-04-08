@@ -1,10 +1,8 @@
 public class Square : IShape
 {
-    
 
     public Square()
     {
-        
         // Constructor
     }
 

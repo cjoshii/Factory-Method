@@ -1,9 +1,6 @@
 public class Circle : IShape
 {
-
-    public Circle()
-    {
-    }
+    public Circle() { }
 
     public void Draw()
     {
