@@ -31,7 +31,8 @@ else
 
 if (factory != null)
 {
-    factory.Draw();
+    var shape = factory.GetShape();
+    shape.Draw();
 }
 
 
@@ -69,3 +70,38 @@ if (drawingPad != null)
 {
     drawingPad.Draw();
 }
+
+
+//-----------------------------Logistics Example--------------------------------//
+Console.WriteLine("Hello! Welcome to the Logistics System! Please select a logistics type:");
+Console.WriteLine("1. Road");
+Console.WriteLine("2. Sea");
+Console.WriteLine("3. Air");
+input = Console.ReadLine();
+Logistics? logistics = null;
+if (input == "1")
+{
+    logistics = new RoadLogistics();
+}
+else if (input == "2")
+{
+    logistics = new SeaLogistics();
+}
+else if (input == "3")
+{
+    logistics = new AirLogistics();
+}
+else
+{
+    Console.WriteLine("Invalid input. Please try again.");
+}
+
+if (logistics != null)
+{
+    var transport = logistics.CreateTransport();
+    transport.Deliver();
+}
+
+//-----------------------------Dialog Example--------------------------------//
+var dialog = new WinDialog();
+dialog.Render();

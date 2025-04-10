@@ -6,10 +6,4 @@ public abstract class ShapeFactory
     {
         Console.WriteLine("ShapeFactory created!");
     }
-
-    public void Draw()
-    {
-        var shape = GetShape();
-        shape.Draw();
-    }
 }
